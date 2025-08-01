@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatzIA - Agentes IA para una atención al cliente excepcional</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-robot"></i>
+                    <span>ChatzIA</span>
+                </div>
+                <nav class="nav" id="mainNav">
+                    <a href="#home" class="nav-link">Inicio</a>
+                    <a href="#features" class="nav-link">Características</a>
+                    <a href="#pricing" class="nav-link">Precios</a>
+                    <a href="#contact" class="nav-link">Contacto</a>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn btn--outline" id="loginBtn">Iniciar Sesión</button>
+                    <button class="btn btn--primary" id="signupBtn">Registrarse Gratis</button>
+                    <div class="user-menu hidden" id="userMenu">
+                        <button class="btn btn--outline" id="dashboardBtn">Dashboard</button>
+                        <button class="btn btn--secondary" id="logoutBtn">Cerrar Sesión</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Landing Page -->
+    <main id="landingPage">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Agentes IA para una atención al cliente excepcional</h1>
+                        <p class="hero-subtitle">Genera en menos de 5 minutos un agente IA que puede resolver hasta el 50% de tus solicitudes de atención al cliente. Es gratis. No requiere programación. Un Agente IA es un chatbot que utiliza Inteligencia Artificial.</p>
+                        <div class="hero-actions">
+                            <button class="btn btn--primary btn--lg" id="getStartedBtn">
+                                <i class="fas fa-rocket"></i>
+                                Comenzar Gratis
+                            </button>
+                            <button class="btn btn--outline btn--lg" id="demoBtn">
+                                <i class="fas fa-play"></i>
+                                Ver Demo
+                            </button>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="stat-number">5,847</span>
+                                <span class="stat-label">Usuarios activos</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">12,453</span>
+                                <span class="stat-label">Bots creados</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">94%</span>
+                                <span class="stat-label">Satisfacción</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="chat-preview">
+                            <div class="chat-header">
+                                <i class="fas fa-robot"></i>
+                                <span>Agente IA Demo</span>
+                                <div class="status-dot"></div>
+                            </div>
+                            <div class="chat-messages" id="demoChat">
+                                <div class="message bot-message">
+                                    <div class="message-content">¡Hola! Soy tu agente IA. ¿En qué puedo ayudarte hoy?</div>
+                                </div>
+                            </div>
+                            <div class="chat-input">
+                                <input type="text" placeholder="Escribe tu mensaje..." id="demoInput">
+                                <button><i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>¿Por qué elegir ChatzIA?</h2>
+                    <p>La plataforma más fácil para crear agentes IA de atención al cliente</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Sin Programación</h3>
+                        <p>Crea agentes IA potentes sin escribir una línea de código</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Integración Multi-Canal</h3>
+                        <p>Conecta con WhatsApp, Telegram y tu sitio web</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🧠</div>
+                        <h3>IA Avanzada</h3>
+                        <p>Resuelve hasta el 50% de consultas automáticamente</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Analytics en Tiempo Real</h3>
+                        <p>Monitorea el rendimiento y optimiza respuestas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing" id="pricing">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Planes que se adaptan a tu negocio</h2>
+                    <p>Comienza gratis y escala según tus necesidades</p>
+                </div>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Gratis</h3>
+                            <div class="price">
+                                <span class="amount">$0</span>
+                                <span class="period">/mes</span>
+                            </div>
+                        </div>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> 2 chatbots</li>
+                            <li><i class="fas fa-check"></i> 100 mensajes/mes</li>
+                            <li><i class="fas fa-check"></i> Integración web básica</li>
+                            <li><i class="fas fa-check"></i> Soporte por email</li>
+                        </ul>
+                        <button class="btn btn--outline btn--full-width">Comenzar Gratis</button>
+                    </div>
+                    <div class="pricing-card pricing-card--popular">
+                        <div class="popular-badge">Más Popular</div>
+                        <div class="pricing-header">
+                            <h3>Pro</h3>
+                            <div class="price">
+                                <span class="amount">$19</span>
+                                <span class="period">/mes</span>
+                            </div>
+                        </div>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> 10 chatbots</li>
+                            <li><i class="fas fa-check"></i> 2,000 mensajes/mes</li>
+                            <li><i class="fas fa-check"></i> WhatsApp + Telegram</li>
+                            <li><i class="fas fa-check"></i> Analytics avanzado</li>
+                            <li><i class="fas fa-check"></i> Soporte prioritario</li>
+                        </ul>
+                        <button class="btn btn--primary btn--full-width">Comenzar Prueba</button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Empresa</h3>
+                            <div class="price">
+                                <span class="amount">Contactar</span>
+                            </div>
+                        </div>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> Chatbots ilimitados</li>
+                            <li><i class="fas fa-check"></i> Mensajes ilimitados</li>
+                            <li><i class="fas fa-check"></i> API personalizada</li>
+                            <li><i class="fas fa-check"></i> Integración custom</li>
+                            <li><i class="fas fa-check"></i> Gerente de cuenta dedicado</li>
+                        </ul>
+                        <button class="btn btn--outline btn--full-width">Contactar Ventas</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Lo que dicen nuestros clientes</h2>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"ChatzIA revolucionó nuestra atención al cliente. Ahora resolvemos consultas 24/7 automáticamente."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>María González</h4>
+                                <span>CEO, TechStart SL</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Increíble facilidad de uso. En 5 minutos teníamos nuestro primer agente funcionando."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Carlos Rodríguez</h4>
+                                <span>Gerente de Marketing, Retail Plus</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Authentication Modal -->
+    <div class="modal hidden" id="authModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="authTitle">Iniciar Sesión</h3>
+                <button class="modal-close" id="closeAuth">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="authForm">
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" id="authEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="authPassword" required>
+                    </div>
+                    <div class="form-group" id="nameGroup" style="display: none;">
+                        <label class="form-label">Nombre Completo</label>
+                        <input type="text" class="form-control" id="authName">
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full-width" id="authSubmit">Entrar</button>
+                </form>
+                <div class="auth-switch">
+                    <span id="authSwitchText">¿No tienes cuenta?</span>
+                    <button class="auth-switch-btn" id="authSwitchBtn">Registrarse</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard -->
+    <div class="dashboard hidden" id="dashboard">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-robot"></i>
+                    <span>ChatzIA</span>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#dashboard-home" class="nav-item active" data-section="dashboard-home">
+                    <i class="fas fa-home"></i>
+                    <span>Inicio</span>
+                </a>
+                <a href="#agents" class="nav-item" data-section="agents">
+                    <i class="fas fa-robot"></i>
+                    <span>Mis Agentes</span>
+                </a>
+                <a href="#create-agent" class="nav-item" data-section="create-agent">
+                    <i class="fas fa-plus"></i>
+                    <span>Crear Agente</span>
+                </a>
+                <a href="#integrations" class="nav-item" data-section="integrations">
+                    <i class="fas fa-plug"></i>
+                    <span>Integraciones</span>
+                </a>
+                <a href="#analytics" class="nav-item" data-section="analytics">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Estadísticas</span>
+                </a>
+                <a href="#billing" class="nav-item" data-section="billing">
+                    <i class="fas fa-credit-card"></i>
+                    <span>Facturación</span>
+                </a>
+                <a href="#settings" class="nav-item" data-section="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Configuración</span>
+                </a>
+            </nav>
+        </div>
+        
+        <div class="main-content">
+            <!-- Dashboard Home -->
+            <div class="content-section active" id="dashboard-home">
+                <div class="page-header">
+                    <h1>Bienvenido a ChatzIA</h1>
+                    <p>Gestiona tus agentes IA desde aquí</p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>2</h3>
+                            <p>Agentes Activos</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>1,247</h3>
+                            <p>Conversaciones</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>87%</h3>
+                            <p>Tasa de Resolución</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>2.3min</h3>
+                            <p>Tiempo Promedio</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-actions">
+                    <button class="btn btn--primary" id="createFirstAgent">
+                        <i class="fas fa-plus"></i>
+                        Crear Mi Primer Agente
+                    </button>
+                </div>
+            </div>
+
+            <!-- Agents Section -->
+            <div class="content-section" id="agents">
+                <div class="page-header">
+                    <h1>Mis Agentes IA</h1>
+                    <button class="btn btn--primary" id="newAgentBtn">
+                        <i class="fas fa-plus"></i>
+                        Nuevo Agente
+                    </button>
+                </div>
+                <div class="agents-grid" id="agentsGrid">
+                    <!-- Agents will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Create Agent Section -->
+            <div class="content-section" id="create-agent">
+                <div class="page-header">
+                    <h1>Crear Nuevo Agente IA</h1>
+                    <div class="wizard-progress">
+                        <div class="step active" data-step="1">
+                            <span class="step-number">1</span>
+                            <span class="step-label">Información Básica</span>
+                        </div>
+                        <div class="step" data-step="2">
+                            <span class="step-number">2</span>
+                            <span class="step-label">Personalidad</span>
+                        </div>
+                        <div class="step" data-step="3">
+                            <span class="step-number">3</span>
+                            <span class="step-label">Configuración</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="wizard-content">
+                    <!-- Step 1: Basic Info -->
+                    <div class="wizard-step active" id="step-1">
+                        <div class="card">
+                            <div class="card__body">
+                                <h3>Información Básica del Agente</h3>
+                                <form id="agentBasicForm">
+                                    <div class="form-group">
+                                        <label class="form-label">Nombre del Agente</label>
+                                        <input type="text" class="form-control" id="agentName" placeholder="Ej: Asistente de Ventas" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Descripción</label>
+                                        <textarea class="form-control" id="agentDescription" rows="3" placeholder="Describe qué hace tu agente..."></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Sector/Industria</label>
+                                        <select class="form-control" id="agentIndustry">
+                                            <option value="">Seleccionar sector</option>
+                                            <option value="ecommerce">E-commerce</option>
+                                            <option value="healthcare">Salud</option>
+                                            <option value="finance">Finanzas</option>
+                                            <option value="education">Educación</option>
+                                            <option value="tech">Tecnología</option>
+                                            <option value="other">Otro</option>
+                                        </select>
+                                    </div>
+                                    <div class="wizard-actions">
+                                        <button type="button" class="btn btn--primary" id="nextStep1">Siguiente</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Personality -->
+                    <div class="wizard-step" id="step-2">
+                        <div class="card">
+                            <div class="card__body">
+                                <h3>Personalidad del Agente</h3>
+                                <form id="agentPersonalityForm">
+                                    <div class="form-group">
+                                        <label class="form-label">Tono de Comunicación</label>
+                                        <select class="form-control" id="agentTone">
+                                            <option value="friendly">Amigable</option>
+                                            <option value="professional">Profesional</option>
+                                            <option value="casual">Casual</option>
+                                            <option value="formal">Formal</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Mensaje de Bienvenida</label>
+                                        <textarea class="form-control" id="welcomeMessage" rows="3" placeholder="¡Hola! Soy tu asistente virtual. ¿En qué puedo ayudarte hoy?"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Idioma Principal</label>
+                                        <select class="form-control" id="agentLanguage">
+                                            <option value="es">Español</option>
+                                            <option value="en">Inglés</option>
+                                            <option value="pt">Portugués</option>
+                                        </select>
+                                    </div>
+                                    <div class="wizard-actions">
+                                        <button type="button" class="btn btn--outline" id="prevStep2">Anterior</button>
+                                        <button type="button" class="btn btn--primary" id="nextStep2">Siguiente</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Configuration -->
+                    <div class="wizard-step" id="step-3">
+                        <div class="card">
+                            <div class="card__body">
+                                <h3>Configuración Final</h3>
+                                <form id="agentConfigForm">
+                                    <div class="form-group">
+                                        <label class="form-label">Canales de Integración</label>
+                                        <div class="checkbox-group">
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" value="web" checked>
+                                                <span class="checkmark"></span>
+                                                Widget Web
+                                            </label>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" value="whatsapp">
+                                                <span class="checkmark"></span>
+                                                WhatsApp
+                                            </label>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" value="telegram">
+                                                <span class="checkmark"></span>
+                                                Telegram
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Horario de Atención</label>
+                                        <select class="form-control" id="workingHours">
+                                            <option value="24/7">24/7 - Siempre activo</option>
+                                            <option value="business">Horario comercial (9 AM - 6 PM)</option>
+                                            <option value="custom">Personalizado</option>
+                                        </select>
+                                    </div>
+                                    <div class="wizard-actions">
+                                        <button type="button" class="btn btn--outline" id="prevStep3">Anterior</button>
+                                        <button type="button" class="btn btn--primary" id="createAgent">Crear Agente</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Integrations Section -->
+            <div class="content-section" id="integrations">
+                <div class="page-header">
+                    <h1>Integraciones</h1>
+                    <p>Conecta tus agentes con diferentes canales</p>
+                </div>
+                <div class="integrations-grid">
+                    <div class="integration-card">
+                        <div class="integration-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="integration-info">
+                            <h3>WhatsApp Business</h3>
+                            <p>Conecta tu agente con WhatsApp Business API</p>
+                            <span class="setup-time">Configuración: 2 minutos</span>
+                        </div>
+                        <div class="integration-actions">
+                            <button class="btn btn--primary">Conectar</button>
+                        </div>
+                    </div>
+                    <div class="integration-card">
+                        <div class="integration-icon">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                        <div class="integration-info">
+                            <h3>Telegram</h3>
+                            <p>Integración directa con Telegram Bot API</p>
+                            <span class="setup-time">Configuración: 1 minuto</span>
+                        </div>
+                        <div class="integration-actions">
+                            <button class="btn btn--primary">Conectar</button>
+                        </div>
+                    </div>
+                    <div class="integration-card">
+                        <div class="integration-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="integration-info">
+                            <h3>Widget Web</h3>
+                            <p>Embed chat widget en tu sitio web</p>
+                            <span class="setup-time">Configuración: 30 segundos</span>
+                        </div>
+                        <div class="integration-actions">
+                            <button class="btn btn--primary">Obtener Código</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analytics Section -->
+            <div class="content-section" id="analytics">
+                <div class="page-header">
+                    <h1>Estadísticas y Analytics</h1>
+                    <div class="date-filter">
+                        <select class="form-control">
+                            <option>Últimos 7 días</option>
+                            <option>Último mes</option>
+                            <option>Últimos 3 meses</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="analytics-grid">
+                    <div class="chart-card">
+                        <h3>Mensajes por Día</h3>
+                        <div class="chart-container" style="position: relative; height: 300px;">
+                            <canvas id="messagesChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Tasa de Resolución</h3>
+                        <div class="chart-container" style="position: relative; height: 300px;">
+                            <canvas id="resolutionChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Billing Section -->
+            <div class="content-section" id="billing">
+                <div class="page-header">
+                    <h1>Facturación y Planes</h1>
+                </div>
+                <div class="billing-content">
+                    <div class="current-plan">
+                        <div class="card">
+                            <div class="card__body">
+                                <h3>Plan Actual: <span class="status status--success">Gratis</span></h3>
+                                <div class="usage-stats">
+                                    <div class="usage-item">
+                                        <span>Mensajes utilizados:</span>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 45%"></div>
+                                        </div>
+                                        <span>45/100</span>
+                                    </div>
+                                    <div class="usage-item">
+                                        <span>Agentes creados:</span>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 50%"></div>
+                                        </div>
+                                        <span>1/2</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn--primary">Actualizar a Pro</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Settings Section -->
+            <div class="content-section" id="settings">
+                <div class="page-header">
+                    <h1>Configuración</h1>
+                </div>
+                <div class="settings-content">
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Perfil de Usuario</h3>
+                            <form id="profileForm">
+                                <div class="form-group">
+                                    <label class="form-label">Nombre Completo</label>
+                                    <input type="text" class="form-control" id="profileName" value="Usuario Demo">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="profileEmail" value="usuario@ejemplo.com" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Empresa</label>
+                                    <input type="text" class="form-control" id="profileCompany" placeholder="Nombre de tu empresa">
+                                </div>
+                                <button type="submit" class="btn btn--primary">Guardar Cambios</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Agent Management Modal -->
+    <div class="modal hidden" id="agentModal">
+        <div class="modal-content modal-lg">
+            <div class="modal-header">
+                <h3 id="agentModalTitle">Gestionar Agente</h3>
+                <button class="modal-close" id="closeAgent">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="agent-tabs">
+                    <button class="tab-btn active" data-tab="faq">FAQ</button>
+                    <button class="tab-btn" data-tab="config">Configuración</button>
+                    <button class="tab-btn" data-tab="test">Probar</button>
+                </div>
+                
+                <div class="tab-content">
+                    <!-- FAQ Tab -->
+                    <div class="tab-pane active" data-tab="faq">
+                        <div class="faq-editor">
+                            <div class="faq-header">
+                                <h4>Editor de Preguntas y Respuestas</h4>
+                                <button class="btn btn--primary" id="addFaqBtn">
+                                    <i class="fas fa-plus"></i>
+                                    Agregar FAQ
+                                </button>
+                            </div>
+                            <div class="faq-list" id="faqList">
+                                <!-- FAQ items will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Config Tab -->
+                    <div class="tab-pane" data-tab="config">
+                        <div class="agent-config">
+                            <h4>Configuración del Agente</h4>
+                            <form id="agentEditForm">
+                                <div class="form-group">
+                                    <label class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" id="editAgentName">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Mensaje de Bienvenida</label>
+                                    <textarea class="form-control" id="editWelcomeMessage" rows="3"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn--primary">Guardar Cambios</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- Test Tab -->
+                    <div class="tab-pane" data-tab="test">
+                        <div class="agent-test">
+                            <h4>Probar tu Agente</h4>
+                            <div class="test-chat">
+                                <div class="chat-messages" id="testChatMessages">
+                                    <div class="message bot-message">
+                                        <div class="message-content">¡Hola! Soy tu agente IA. ¿En qué puedo ayudarte?</div>
+                                    </div>
+                                </div>
+                                <div class="chat-input">
+                                    <input type="text" placeholder="Escribe tu mensaje de prueba..." id="testChatInput">
+                                    <button id="sendTestMessage"><i class="fas fa-paper-plane"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-robot"></i>
+                        <span>ChatzIA</span>
+                    </div>
+                    <p>La plataforma más fácil para crear agentes IA de atención al cliente</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Producto</h4>
+                    <ul>
+                        <li><a href="#features">Características</a></li>
+                        <li><a href="#pricing">Precios</a></li>
+                        <li><a href="#integrations">Integraciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Soporte</h4>
+                    <ul>
+                        <li><a href="#help">Centro de Ayuda</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                        <li><a href="#api">API</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#privacy">Privacidad</a></li>
+                        <li><a href="#terms">Términos</a></li>
+                        <li><a href="#cookies">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ChatzIA. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
