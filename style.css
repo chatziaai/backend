@@ -303,7 +303,7 @@ html {
   font-family: var(--font-family-base);
   line-height: var(--line-height-normal);
   color: var(--color-text);
-  background-color: var(--color-background);
+  background-color: aliceblue;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
@@ -744,7 +744,7 @@ select.form-control {
 body {
   font-family: var(--font-family-base);
   color: var(--color-text);
-  background-color: var(--color-background);
+  background-color: aliceblue;
   margin: 0;
   padding: 0;
   line-height: var(--line-height-normal);
@@ -932,7 +932,7 @@ body {
   outline: none;
   padding: var(--space-8);
   border-radius: var(--radius-base);
-  background: var(--color-background);
+  background: aliceblue;
 }
 
 .chat-input button {
@@ -976,7 +976,7 @@ body {
 .feature-card {
   text-align: center;
   padding: var(--space-32);
-  background: var(--color-background);
+  background: aliceblue;
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-card-border);
   transition: transform var(--duration-normal) var(--ease-standard);
@@ -1627,7 +1627,7 @@ body {
 }
 
 .faq-item {
-  background: var(--color-background);
+  background: aliceblue;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-base);
   padding: var(--space-16);
