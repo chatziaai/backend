@@ -1245,7 +1245,7 @@ body {
 .main-content {
   flex: 1;
   overflow-y: auto;
-  background: var(--color-background);
+  background: aliceblue;
 }
 
 .content-section {
